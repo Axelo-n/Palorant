@@ -257,7 +257,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../Assets/Images/News_bg.png);
+    background-image: url('../Assets/Images/News_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -639,12 +639,22 @@ a:hover {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .maps-right {
-    width: 30%;
-    height: 100%;
+    right: 0;
+    width: 570px;
+    height: 80vh;
+    padding-right: 50px;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    justify-content: right;
+    text-align: right;
+    background-image: url('../Assets/Images/Map_bg.png');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .maps-bg {
@@ -656,12 +666,14 @@ a:hover {
 
 .image-accordion {
     display: flex;
-    width: 70%;
+    padding-right: 20px;
+    width: 65%;
     height: 74vh;
     gap: 5px;
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
+    clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
 }
 
 .panel {
@@ -711,6 +723,51 @@ a:hover {
 /* Panel lain jadi kecil */
 .image-accordion .panel:not(.active) {
     flex: 0.5;
+}
+
+.maps-right-top, .maps-right-bottom {
+    height: 17vh;
+    width: 100%;
+}
+
+.maps-right-center {
+    height: 51vh;
+    width: 100%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+}
+
+.maps-chooseyour {
+    width: 100%;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 500;
+    line-height: clamp(1.5rem, 3vw, 3rem);
+    color: #f5f5f5;
+    text-align: right;
+    font-style: italic;
+}
+
+.maps-title {
+    width: 100%;
+    font-size: clamp(1.5rem, 8.5vw, 8rem);
+    font-weight: 700;
+    line-height: clamp(1.5rem, 8.5vw, 8rem);
+    color: #FF5C00;
+    text-align: right;
+    font-style: italic;
+}
+
+.maps-desc {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 60px;
+    font-size: clamp(1rem, 1.2vw, 5rem);
+    font-weight: 400;
+    text-align: right;
+    justify-content: right;
 }
 
 .mobile-app {
