@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    max-width: 1440px;
     /* overflow-x: hidden; */
 }
 
@@ -646,11 +647,14 @@ a:hover {
     right: 0;
     width: 570px;
     height: 80vh;
-    padding-right: 50px;
     clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
     position: absolute;
     justify-content: right;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url('../Assets/Images/Map_bg.png');
     background-position: right;
     background-size: cover;
@@ -728,16 +732,27 @@ a:hover {
 .maps-right-top, .maps-right-bottom {
     height: 17vh;
     width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .maps-right-center {
-    height: 51vh;
+    height: 45vh;
     width: 100%;
+    padding-right: 50px;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: right;
+}
+
+.maps-right-container {
+    height: 100%;
+    width: 100%;
+    align-items: center;
 }
 
 .maps-chooseyour {
@@ -770,10 +785,151 @@ a:hover {
     justify-content: right;
 }
 
+.maps-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.maps-btn {
+    padding: 0.4rem 3.2rem 0.4rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: flex;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #FF5C00;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    transition: padding 0.3s ease;
+}
+
+.maps-btn:hover {
+    color: #FF5C00;
+    background-color: #f5f5f5;
+    padding-right: 6rem;
+}
+
 .mobile-app {
     height: 80px;
     width: 100%;
     display: flex;
+    font-weight: 500;
+    font-size: 16px;
     align-items: center;
     justify-content: center;
+    background-color: #2A2A2A;
+}
+
+.terms {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-media {
+    height: 50px;
+    width: 100%;
+    padding: 0 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socmed-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2A2A2A;
+}
+
+.company {
+    height: 150px;
+    width: 100%;
+    padding: 0 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.giot-terms {
+    height: 30px;
+}
+
+.giot-terms-fill {
+    fill: #f5f5f5;
+    opacity: 0.6;
+}
+
+.trademark {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #f5f5f5;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.tos {
+    height: 40px;
+    width: 100%;
+    padding: 0 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tos-items {
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating {
+    height: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-box {
+    height: 140px;
+    width: 270px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #2A2A2A;
+}
+
+.rating-img-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.rating-img {
+    height: 80%;
+}
+
+.rating-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.blank {
+    height: 50px;
 }
