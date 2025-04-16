@@ -1,0 +1,756 @@
+@import url(style.css);
+
+.landing {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Assets/Images/Landing_bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.palorant-img {
+    width: 35%;
+    margin-bottom: 10px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #1A1A1A);
+}
+
+.landing-desc {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-shadow: 0 0 8px #1A1A1A;
+}
+
+.landing-btns {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 2rem;
+}
+
+.btn-play {
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    background-color: #FF5C00;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.btn-play:hover {
+    color: #1A1A1A;
+    transform: scale(1.2);
+}
+
+.btn-learn {
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    color: #FF5C00;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    background-color: #f5f5f5;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.btn-learn:hover {
+    color: #1A1A1A;
+    transform: scale(1.2);
+}
+
+
+.news {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Assets/Images/News_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ntitle-container {
+    width: 100%;
+    padding: 1rem 2rem 0 2rem;
+    font-size: 28px;
+    font-weight: 400;
+    display: flex;
+}
+
+.news-title {
+    font-weight: 500;
+}
+
+.card-container {
+    height: 65%;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ncard {
+    height: 350px;
+    width: 100%;
+    background-color: #2A2A2A;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.card-container:hover .ncard {
+    transform: scale(0.9);
+}
+
+.card-container:hover .ncard:hover {
+    transform: scale(1.05);
+}
+
+.card-container:hover .ncard:active {
+    transform: scale(0.95);
+}
+
+.left-bar {
+    height: 350px;
+    width: 10px;
+    background-color: #FF5C00;
+    display: flex;
+}
+
+.news-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-img {
+    height: auto;
+    width: 90%;
+}
+
+.news-text {
+    padding: 20px 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-heading {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.news-info {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.news-category {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ncategory {
+    color: #FF5C00;
+    font-weight: 500;
+}
+
+.ndate {
+    font-size: 12px;
+}
+
+
+
+.season {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    background-image: url('../Assets/Images/Season_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.season-wrapper {
+    width: 50%;
+    margin-bottom: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: right;
+    text-align: right;
+}
+
+.season-heading {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 4.5rem;
+    text-shadow: 0 0 25px black;
+}
+
+.season-text {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.season-btn {
+    border: none;
+    padding: 0.5rem 2.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FF5C00;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    background-color: #f5f5f5;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.season-btn:hover {
+    color: #f5f5f5;
+    background-color: #FF5C00;
+    transform: scale(1.2);
+}
+
+
+
+.identity {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-image: url('../Assets/Images/Identity_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.identity-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 47%;
+}
+
+.identity-top, .identity-bottom {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+}
+
+.identity-center {
+    height: 70%;
+    width: 100%;
+    padding-right: 50px;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    flex-direction: column;
+}
+
+.identity-weare {
+    font-size: 300%;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.identity-weare-container {
+    justify-content: right;
+}
+
+.identity-palorant {
+    width: 85%;
+}
+
+.identity-desc-container {
+    padding-top: 25px;
+}
+
+.identity-text {
+    font-size: 120%;
+    font-weight: 400;
+}
+
+.identity-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.identity-btn {
+    padding: 0.4rem 3.2rem 0.4rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: flex;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #FF5C00;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    transition: padding 0.3s ease;
+}
+
+.identity-btn:hover {
+    color: #FF5C00;
+    background-color: #f5f5f5;
+    padding-right: 6rem;
+}
+
+
+
+.agents {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../Assets/Images/Agents_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.agents-left {
+    height: 100%;
+    width: 42%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 20;
+}
+
+.agents-right {
+    height: 100%;
+    width: 58%;
+    padding-left: 70px;
+    gap: 23px;
+    justify-content: flex-start;
+    display: flex;
+    overflow: hidden;
+}
+
+.agents-card {
+    transition: opacity 0.3s ease;
+}
+
+#jett, #phoenix {
+    transform: scale(1.1) translateY(-70px) rotate(-7deg);
+}
+
+#chamber, #omen {
+    transform: scale(1.1) translateY(70px) translateX(17px) rotate(-7deg);
+}
+
+.agents-card.dimmed {
+    opacity: 0.5;
+}
+
+/* #jett:hover, #phoenix:hover {
+    transform: scale(1.15) translateY(-50px) translateX(3px) rotate(-7deg);
+}
+
+#chamber:hover, #omen:hover {
+    transform: scale(1.15) translateY(90px) translateX(19px) rotate(-7deg);
+} */
+
+.agents-left-top, .agents-left-bottom {
+    height: 16%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.agents-left-center {
+    height: 60%;
+    width: 100%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.agents-meetyour {
+    width: 100%;
+    font-size: 300%;
+    font-weight: 500;
+    line-height: 50px;
+    color: #1A1A1A;
+    text-align: left;
+    font-style: italic;
+}
+
+.agents-title {
+    width: 100%;
+    font-size: 800%;
+    font-weight: 700;
+    line-height: 120px;
+    color: #FF5C00;
+    text-align: left;
+    font-style: italic;
+}
+
+.agents-desc {
+    width: 100%;
+    padding-top: 20px;
+    font-size: 120%;
+    font-weight: 400;
+}
+
+.agents-left-bottom {
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.agents-btn {
+    padding: 0.4rem 3.2rem 0.4rem 3.2rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: flex;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    background-color: #FF5C00;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    transition: padding 0.3s ease;
+}
+
+.agents-btn:hover {
+    color: #FF5C00;
+    background-color: #f5f5f5;
+    padding-left: 6rem;
+}
+
+
+.maps {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.maps-right {
+    right: 0;
+    width: 45%;
+    height: 100%;
+    clip-path: polygon(23% 0%, 100% 0%, 100% 100%, 11% 100%);
+    position: absolute;
+    justify-content: right;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Assets/Images/Map_bg.png');
+    /* background-position: right; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.maps-bg {
+    height: 600px;
+    width: 570px;
+    z-index: 20;
+}
+
+.image-accordion {
+    /* position: absolute; */
+    display: flex;
+    padding-right: 20px;
+    width: 66%;
+    height: 510px;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    
+    clip-path: polygon(0% 0%, 100% 0%, 93.5% 100%, 0% 100%);
+}
+
+.panel {
+    flex: 1;
+    height: 510px;
+    transform: skewX(-7deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: flex 0.5s ease;
+    /* background-color: #f5f5f5; */
+}
+
+.panel img {
+    width: auto;
+    height: 700px;
+    transform: translateY(-90px);
+    position: translate;
+    object-fit: contain;
+    transition: transform 0.5s ease, height 0.5s ease;
+}
+
+/* Panel aktif membesar */
+.panel.active {
+    flex: 3;
+}
+
+/* Gambar di panel aktif naik */
+.panel.active img {
+    height: 520px;
+    transform: translateY(0);
+}
+
+/* Panel lain jadi kecil */
+.image-accordion .panel:not(.active) {
+    flex: 0.5;
+}
+
+.maps-right-top, .maps-right-bottom {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.maps-right-center {
+    height: 60%;
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+}
+
+.maps-right-container {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.maps-chooseyour {
+    width: 100%;
+    font-size: 250%;
+    font-weight: 500;
+    line-height: 50px;
+    color: #f5f5f5;
+    text-align: right;
+    font-style: italic;
+}
+
+.maps-title {
+    width: 100%;
+    font-size: 800%;
+    font-weight: 700;
+    line-height: 120px;
+    color: #FF5C00;
+    text-align: right;
+    font-style: italic;
+}
+
+.maps-desc {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 80px;
+    font-size: 120%;
+    font-weight: 400;
+    text-align: right;
+    justify-content: right;
+}
+
+.maps-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.maps-btn {
+    padding: 0.4rem 3.2rem 0.4rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: flex;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #FF5C00;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    transition: padding 0.3s ease;
+}
+
+.maps-btn:hover {
+    color: #FF5C00;
+    background-color: #f5f5f5;
+    padding-right: 6rem;
+}
+
+.mobile-app {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2A2A2A;
+}
+
+.terms {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-media {
+    height: 50px;
+    width: 100%;
+    padding: 0 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socmed-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2A2A2A;
+}
+
+.company {
+    height: 150px;
+    width: 100%;
+    padding: 0 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.giot-terms {
+    height: 30px;
+}
+
+.giot-terms-fill {
+    fill: #f5f5f5;
+    opacity: 0.6;
+}
+
+.trademark {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #f5f5f5;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.tos {
+    height: 40px;
+    width: 100%;
+    padding: 0 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tos-items {
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating {
+    height: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-box {
+    height: 140px;
+    width: 270px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #2A2A2A;
+}
+
+.rating-img-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.rating-img {
+    height: 80%;
+}
+
+.rating-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.blank {
+    height: 50px;
+}
