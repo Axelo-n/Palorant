@@ -272,18 +272,47 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    background-image: url('../Assets/Images/Identity_bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.identity-img {
+    height: 600px;
+    position: absolute;
+}
+
+.identity-left {
+    height: 100%;
+    width: 55%;
+    padding-left: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.video-wrapper {
+    height: 60vh;
+    width: 100%;
+    max-height: 500px;
+    padding: 15px;
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    background-color: #FF5C00;
+}
+
+.identity-vid {
+    width: 55vw;
+}
+
 .identity-container {
+    height: 100%;
+    width: 45%;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    width: 47%;
 }
 
 .identity-top, .identity-bottom {
@@ -663,7 +692,7 @@
 }
 
 .terms {
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -672,7 +701,7 @@
 .social-media {
     height: 50px;
     width: 100%;
-    padding: 0 500px;
+    padding: 40px 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -689,11 +718,13 @@
 }
 
 .company {
-    height: 150px;
+    height: 120px;
     width: 100%;
+    margin: 10px 0;
     padding: 0 300px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -718,7 +749,7 @@
 .tos {
     height: 40px;
     width: 100%;
-    padding: 0 350px;
+    padding: 40px 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -771,4 +802,5 @@
 
 .blank {
     height: 50px;
+    width: 100%;
 }
