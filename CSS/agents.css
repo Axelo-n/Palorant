@@ -1,10 +1,93 @@
 @import url(style.css);
 
-.test {
-    height: 600px;
+.title {
+    height: 150px;
     width: 100%;
-    max-width: 1440px;
+    padding: 30px 50px 0 50px;
     display: flex;
     align-items: center;
+}
+
+h1 {
+    font-size: 64px;
+    font-style: italic;
+    color: #F5F5F5;
+}
+
+.agents-display {
+    height: 450px;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    height: 400px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    clip-path: polygon(20% 0%, 100% 0, 100% 90%, 80% 100%, 0 100%, 0% 10%);
+    background-color: #2A2A2A;
+    transition: transform 0.3s ease;
+}
+
+.portrait {
+    height: 85%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.agents-img {
+    height: 250%;
+    transform: translateY(190px);
+    transition: height 0.3s ease, transform 0.3s ease;
+}
+
+#gekko {
+    height: 190%;
+    transform: translateY(190px);
+    transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .agents-img {
+    height: 160%;
+    transform: translateY(70px);
+}
+
+.card:hover #gekko {
+    height: 120%;
+    transform: translateY(80px) translateX(-15px);
+}
+
+.card:hover #jett {
+    height: 160%;
+    transform: translateY(70px) translateX(-10px);
+}
+
+.name {
+    height: 15%;
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5F5;
+}
+
+.name-text {
+    color: #FF5C00;
+    font-weight: 700;
+    font-size: 32px;
 }
