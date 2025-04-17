@@ -74,7 +74,7 @@
 }
 
 .btn-play:hover {
-    color: #1A1A1A;
+    /* color: #1A1A1A; */
     transform: scale(1.2);
 }
 
@@ -92,7 +92,7 @@
 }
 
 .btn-learn:hover {
-    color: #1A1A1A;
+    /* color: #1A1A1A; */
     transform: scale(1.2);
 }
 
@@ -295,7 +295,7 @@
     height: 60vh;
     width: 100%;
     max-height: 500px;
-    padding: 15px;
+    padding: 10px;
     z-index: 0;
     position: absolute;
     display: flex;
@@ -412,8 +412,9 @@
     height: 100%;
     width: 58%;
     padding-left: 70px;
-    gap: 23px;
+    gap:35px;
     justify-content: flex-start;
+    position: relative;
     display: flex;
     overflow: hidden;
 }
@@ -426,12 +427,41 @@
     transform: scale(1.1) translateY(-70px) rotate(-7deg);
 }
 
-#chamber, #omen {
+#chamber {
     transform: scale(1.1) translateY(70px) translateX(17px) rotate(-7deg);
 }
 
 .agents-card.dimmed {
     opacity: 0.5;
+}
+
+.best-agent.dimmed {
+    opacity: 0.5;
+}
+
+.best-agent {
+    padding: 15px 160px 15px 80px;
+    transform: translateX(150px) translateY(450px);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    justify-content: left;
+    background-color: #f5f5f5;
+}
+
+.best-name {
+    color: #FF5C00;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 50px;
+    font-style: italic;
+}
+
+.best-desc {
+    color: #1A1A1A;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 30px;
+    font-style: italic;
 }
 
 /* #jett:hover, #phoenix:hover {
@@ -512,6 +542,8 @@
     background-color: #f5f5f5;
     padding-left: 6rem;
 }
+
+
 
 
 .maps {

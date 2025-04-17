@@ -95,7 +95,7 @@ body {
 }
 
 .left-nav, .right-nav {
-    width: 38%;
+    width: 40%;
     padding: 0 1rem;
     gap: 2rem;
     display: flex;
@@ -201,11 +201,11 @@ body {
     font-weight: 600;
     cursor: pointer;
     border-radius: 4px;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .play-btn:hover {
-    color: black;
+    transform: scale(1.1);
 }
 
 a {
@@ -219,6 +219,28 @@ a {
 a:hover {
     color: #FF5C00;
 }
+
+.nav-links {
+    position: relative;
+    padding: 5px;
+}
+
+.nav-links::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+    background-color: #FF5C00;
+    transition: width 0.3s ease-in-out;
+}
+  
+.nav-links:hover::after {
+    width: 100%;
+}  
 
 .divider {
     height: 25px;
