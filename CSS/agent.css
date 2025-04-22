@@ -105,6 +105,10 @@
     justify-content: center;
 }
 
+#gekko {
+    transform: scale(0.8) translateX(-220px);
+}
+
 .portrait-img {
     height: 160%;
     transform: translateX(-200px) translateY(-50px);
