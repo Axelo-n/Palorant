@@ -63,7 +63,7 @@
     background-color: #c5c5c5;
 }
 
-p {
+.card-p, .skill-desc {
     font-size: 18px;
     line-height: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
