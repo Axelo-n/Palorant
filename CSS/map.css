@@ -1,0 +1,130 @@
+@import url(style.css);
+
+.map-info {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.map-bg {
+    position: absolute;
+    filter: blur(2px);
+    width: 100%;
+    max-width: 1440px;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+.minimap-container {
+    height: 100%;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minimap {
+    height: 90%;
+}
+
+.map-details {
+    padding-right: 130px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.name {
+    font-size: 88px;
+    line-height: 80px;
+    padding: 15px 0 15px 30px;
+    /* background-color: #F5F5F5; */
+    text-shadow: 0px 0px 15px #1A1A1A;
+    color: #FF5C00;
+    font-style: italic;
+    text-align: right;
+}
+
+.desc {
+    font-size: 18px;
+    text-align: right;
+    text-shadow: 0px 0px 10px #1A1A1A;
+}
+
+.gallery {
+    height: 750px;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../Assets/Images/Home/News_bg.png);
+    background-size: cover;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+    background-color: #1A1A1A;
+}
+
+.main-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+  
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.thumbnail-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+  
+.thumb-nav {
+    font-size: 2rem;
+    padding: 10px;
+    z-index: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+  
+.thumbnails {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px;
+    scrollbar-width: none; /* Firefox */
+}
+  
+.thumbnails::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+  
+.thumb {
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s ease;
+    border-radius: 4px;
+}
+  
+.thumb.active {
+    border: 2px solid #FF5C00;
+}
+  
