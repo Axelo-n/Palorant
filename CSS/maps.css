@@ -65,6 +65,7 @@ h1 {
     flex: 1;
     height: 410px;
     transform: skewX(-7deg);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,6 +81,26 @@ h1 {
     position: translate;
     object-fit: contain;
     transition: transform 0.5s ease, height 0.5s ease;
+}
+
+.panel-hint {
+    bottom: 10px;
+    right: 0px;
+    padding: 5px 20px;
+    font-size: 20px;
+    z-index: 2;
+    opacity: 0;
+    font-style: italic;
+    position: absolute;
+    color: transparent;
+    color: #F5F5F5;
+    background-color: #FF5C00;
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.panel.active .panel-hint {
+    opacity: 1;
 }
 
 /* Panel aktif membesar */
