@@ -139,11 +139,22 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .agents-display {
-        margin-top: 50px;
+    h1 {
+        font-size: 48px;
     }
     
     .card {
+        height: 300px;
+        width: 200px;
         flex: 1 1 calc(50% - 10px); /* 2 card dalam satu baris pada layar kecil */
+    }
+
+    .roles-img {
+        width: 250px;
+        transform: translateX(-25px);
+    }
+
+    .name-text {
+        font-size: 28px;
     }
 }
