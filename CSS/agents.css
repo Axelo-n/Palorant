@@ -23,13 +23,15 @@ h1 {
 }
 
 .agents-display {
-    height: 450px;
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 20px;
+    gap: 30px;
+    row-gap: 50px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .card {
@@ -134,4 +136,14 @@ footer {
 .space {
     height: 50px;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .agents-display {
+        margin-top: 50px;
+    }
+    
+    .card {
+        flex: 1 1 calc(50% - 10px); /* 2 card dalam satu baris pada layar kecil */
+    }
 }
