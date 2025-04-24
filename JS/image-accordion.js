@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         panel.addEventListener("mouseleave", () => {
             // tunggu sampai mouse keluar dari container buat lanjut scroll lagi
-            // (biar nggak flicker pas geser dari panel ke panel)
         });
     });
 

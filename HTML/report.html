@@ -10,6 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="../CSS/report.css">
     <script src="../JS/hamburger-menu.js"></script>
+    <script src="../JS/report-bugs.js"></script>
 </head>
 <body>
     <div class="big-container">
@@ -88,9 +89,48 @@
         </header>
     
         <main>
-            <section class="test">
-                <p>REPORT</p>
-            </section>
+            <div class="background"></div>
+            <div class="container">
+                <h1>REPORT BUG</h1>
+                <form id="bugForm" novalidate>
+                  <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="e.g. Player123">
+                    <div id="error-username" class="error"></div>
+                  </div>
+            
+                  <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="e.g. you@example.com">
+                    <div id="error-email" class="error"></div>
+                  </div>
+            
+                  <div>
+                    <label for="server">Server</label>
+                    <select id="server">
+                      <option value="">— Pilih Server —</option>
+                      <option>Asia</option>
+                      <option>Europe</option>
+                      <option>America</option>
+                    </select>
+                    <div id="error-server" class="error"></div>
+                  </div>
+            
+                  <div>
+                    <label for="description">Bug Description</label>
+                    <textarea id="description" placeholder="Elaborate the bug encountered..." ></textarea>
+                    <div id="error-description" class="error"></div>
+                  </div>
+            
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="permission">
+                    <label for="permission">Let Palorant send replies regarding this report through e-mail.</label>
+                  </div>
+                  <div id="error-permission" class="error"></div>
+            
+                  <button type="submit" class="btn-submit">SUBMIT REPORT</button>
+                </form>
+              </div>
         </main>
 
         <footer>        
