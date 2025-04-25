@@ -4,6 +4,7 @@
 .landing {
     height: 630px;
     width: 100%;
+    max-width: 1440px;
     position: relative;
     display: flex;
     align-items: center;
@@ -104,6 +105,7 @@
 .news {
     height: 620px;
     width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,6 +114,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .ntitle-container {
@@ -223,6 +226,7 @@
 .season {
     height: 700px;
     width: 100%;
+    max-width: 1440px;
     display: flex;
     align-items: end;
     justify-content: right;
@@ -230,6 +234,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .season-wrapper {
@@ -245,7 +250,7 @@
 
 .season-heading {
     font-size: 4.5rem;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 4.5rem;
     text-shadow: 0 0 25px black;
 }
@@ -287,11 +292,20 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .identity-img {
     height: 600px;
+    width: 1440px;
     position: absolute;
+    /* transform: translateX(-150px); */
+    z-index: 1;
+    overflow: hidden;
+    background-image: url(../Assets/Images/Home/identity.png);
+    background-position: 700px center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .identity-left {
@@ -304,7 +318,6 @@
 }
 
 .video-wrapper {
-    height: 60vh;
     width: 100%;
     max-height: 500px;
     padding: 10px;
@@ -325,6 +338,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 .identity-top, .identity-bottom {
@@ -347,7 +361,7 @@
 }
 
 .identity-weare {
-    font-size: 300%;
+    font-size: 3vw;
     font-style: italic;
     font-weight: 500;
 }
@@ -365,7 +379,7 @@
 }
 
 .identity-text {
-    font-size: 120%;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-weight: 400;
 }
 
@@ -401,6 +415,7 @@
 .agents {
     height: 600px;
     width: 100%;
+    max-width: 1440px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -408,25 +423,28 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .agents-left {
     height: 100%;
-    width: 42%;
+    width: 100%;
+    padding-right: 58%;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: left;
     z-index: 20;
 }
 
 .agents-right {
-    height: 100%;
-    width: 58%;
+    height: 600px;
+    width: 100%;
     padding-left: 70px;
     gap:35px;
-    justify-content: flex-start;
-    position: relative;
+    justify-content: flex-end;
+    position: absolute;
     display: flex;
     overflow: hidden;
 }
@@ -494,38 +512,43 @@
 .agents-left-center {
     height: 60%;
     width: 100%;
-    padding-left: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .agents-meetyour {
-    width: 100%;
-    font-size: 300%;
+    padding: 0 50px;
+    margin: 0;
+    font-size: 3.5vw;
     font-weight: 500;
     line-height: 50px;
     color: #1A1A1A;
     text-align: left;
     font-style: italic;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+    background-color: #f5f5f5;
 }
 
 .agents-title {
-    width: 100%;
-    font-size: 800%;
+    padding: 0 100px 0 50px;
+    font-size: clamp(90px, 9vw, 120px);
     font-weight: 700;
-    line-height: 120px;
+    line-height: 100%;
     color: #FF5C00;
     text-align: left;
     font-style: italic;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+    background-color: #f5f5f5;
 }
 
 .agents-desc {
     width: 100%;
-    padding-top: 20px;
-    font-size: 120%;
+    padding: 20px 20px 20px 50px;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-weight: 400;
+    text-shadow: 0px 0px 10px #f5f5f5;
 }
 
 .agents-left-bottom {
@@ -561,15 +584,17 @@
 .maps {
     height: 600px;
     width: 100%;
+    max-width: 1440px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: left;
+    overflow: hidden;
 }
 
 .maps-right {
     right: 0;
-    width: 45%;
+    width: 100%;
     height: 100%;
     clip-path: polygon(23% 0%, 100% 0%, 100% 100%, 11% 100%);
     position: absolute;
@@ -578,17 +603,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-image: url('../Assets/Images/Home/Map_bg.png');
-    /* background-position: right; */
-    background-size: cover;
-    background-repeat: no-repeat;
+    align-items: flex-end;
 }
 
 .maps-bg {
     height: 600px;
-    width: 570px;
-    z-index: 20;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../Assets/Images/Home/Map_bg.png');
+    background-size: contain;
+    background-position: 57vw center;
+    background-repeat: no-repeat;
 }
 
 .image-accordion {
@@ -601,7 +627,6 @@
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
-    
     clip-path: polygon(0% 0%, 100% 0%, 93.5% 100%, 0% 100%);
 }
 
@@ -652,13 +677,13 @@
 
 .maps-right-center {
     height: 60%;
-    width: 100%;
+    width: 45%;
     padding-right: 50px;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: right;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .maps-right-container {
@@ -668,8 +693,7 @@
 }
 
 .maps-chooseyour {
-    width: 100%;
-    font-size: 250%;
+    font-size: 3vw;
     font-weight: 500;
     line-height: 50px;
     color: #f5f5f5;
@@ -678,20 +702,18 @@
 }
 
 .maps-title {
-    width: 100%;
-    font-size: 800%;
+    font-size: 9vw;
     font-weight: 700;
-    line-height: 120px;
+    line-height: 100%;
     color: #FF5C00;
     text-align: right;
     font-style: italic;
 }
 
 .maps-desc {
-    width: 100%;
     padding-top: 20px;
     padding-left: 80px;
-    font-size: 120%;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-weight: 400;
     text-align: right;
     justify-content: right;
@@ -733,4 +755,18 @@
     align-items: center;
     justify-content: center;
     background-color: #2A2A2A;
+}
+
+@media (max-width: 975px) {
+    #phoenix {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .season {
+        background-position: -150px center;
+    }
 }
