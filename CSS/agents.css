@@ -241,6 +241,15 @@ footer {
         
     }
 
+    .card {
+        clip-path: polygon(20% 0%, 100% 0, 100% 90%, 90% 100%, 0 100%, 0% 10%);
+    }
+
+    .roles-img {
+        width: 80vw;
+        transform: translateX(0px) translateY(40px);
+    }
+
     .agents-link {
         width: 90%;
     }
