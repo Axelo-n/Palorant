@@ -399,6 +399,26 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .navBar {
+        height: 50px;
+        width: 100%;
+    }
+
+    .navbar-placeholder {
+        height: 50px;
+    }
+
+    .emblem-img {
+        height: 120px;
+        width: 100px;
+        top: -27.5px;
+    }
+
+    .logo-img {
+        height: 50px;
+        left: 51%;
+    }
+
     .social-media {
         padding: 40px 20%;
     }
