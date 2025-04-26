@@ -1,7 +1,7 @@
 @import url(style.css);
 
 .maps {
-    height: 700px;
+    height: auto;
     width: 100%;
     position: relative;
     display: flex;
@@ -31,9 +31,9 @@ h1 {
 }
 
 .accordion-wrapper {
-    height: 450px;
+    height: auto;
     width: 100%;
-    padding: 0 80px;
+    padding: 30px 80px;
     display: flex;
     align-items: center;
     background-color: #1A1A1A;
@@ -52,7 +52,7 @@ h1 {
 
 .image-accordion {
     /* position: absolute; */
-    height: 400px;
+    height: auto;
     width: 100%;
     gap: 5px;
     display: flex;
@@ -74,7 +74,7 @@ h1 {
     /* background-color: #f5f5f5; */
 }
 
-.panel img {
+.panel-img {
     width: auto;
     height: 700px;
     transform: translateY(-90px);
@@ -109,7 +109,7 @@ h1 {
 }
 
 /* Gambar di panel aktif naik */
-.panel.active img {
+.panel.active .panel-img {
     height: 520px;
     transform: translateY(50px);
 }
@@ -117,4 +117,112 @@ h1 {
 /* Panel lain jadi kecil */
 .image-accordion .panel:not(.active) {
     flex: 0.5;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .title {
+        height: 150px;
+        padding: 30px 50px 0 0;
+        margin-bottom: 0px;
+    }
+
+    .image-accordion {
+        /* position: absolute; */
+        height: auto;
+        width: 100%;
+        gap: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        gap: 5px;
+        grid-template-rows: repeat(auto-fit, minmax(75px, 1fr));
+        /* overflow: hidden; */
+    }
+    
+    .panel {
+        flex: 1;
+        height: 75px;
+        width: 95vw;
+        transform: skewX(-7deg);
+        position: relative;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        overflow-y: hidden;
+        transition: height 0.5s ease;
+        /* background-color: #f5f5f5; */
+    }
+    
+    .panel-img {
+        width: 700px;
+        height: auto;
+        transform: translateY(0px);
+        object-fit: cover;
+        transition: transform 0.5s ease, height 0.5s ease;
+    }
+    
+    .panel-hint {
+        bottom: 10px;
+        padding: 5px 20px 5px 20px;
+        font-size: 20px;
+        z-index: 2;
+        opacity: 0;
+        font-style: italic;
+        position: absolute;
+        color: transparent;
+        color: #F5F5F5;
+        background-color: #FF5C00;
+        clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+        transition: opacity 0.2s ease-in-out;
+    }
+    
+    .panel.active .panel-hint {
+        opacity: 1;
+    }
+    
+    /* Panel aktif membesar */
+    .panel.active {
+        height: 250px;
+    }
+    
+    /* Gambar di panel aktif naik */
+    .panel.active .panel-img {
+        height: auto;
+        transform: translateY(0px);
+    }
+    
+    /* Panel lain jadi kecil */
+    .image-accordion .panel:not(.active) {
+        flex: 0.5;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .title {
+        height: 120px;
+        padding: 40px 50px 0 0;
+        margin-bottom: 0px;
+    }
+
+    .image-accordion {
+        grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .panel {
+        height: 50px;
+    }
+
+    .panel-img {
+        width: 500px;
+    }
 }

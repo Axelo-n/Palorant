@@ -1,16 +1,16 @@
 @import url(style.css);
 
 .news {
-    height: 1000px;
     width: 100%;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-image: url('../Assets/Images/Home/News_bg.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .title {
@@ -33,26 +33,20 @@
 }
 
 .card-container {
-    height: 65%;
-    width: 100%;
-    padding: 0 2rem;
-    gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 0 2rem;
 }
 
 .news-link {
     height: 360px;
-    width: 100%;
-    flex: 1 1 calc(24% - 10px);
 }
 
 .ncard {
     height: 360px;
-    width: 100%;
-    flex: 1 1 calc(24% - 10px);
+    width: 370px;
     background-color: #2A2A2A;
     display: flex;
     transition: transform 0.3s ease;
