@@ -433,7 +433,7 @@ footer {
     }
 
     .nav {
-        top: 65px; /* adjust based on navbar height */
+        top: 50px; /* adjust based on navbar height */
         left: 0;
         width: 30%;
         height: 0;

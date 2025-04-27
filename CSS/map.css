@@ -44,7 +44,7 @@
 }
 
 .name {
-    font-size: 8vw;
+    font-size: clamp(12px, 8vw, 100px);
     line-height: 50%;
     padding: 15px 0 15px 30px;
     /* background-color: #F5F5F5; */

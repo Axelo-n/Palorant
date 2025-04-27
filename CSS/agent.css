@@ -1,13 +1,18 @@
 @import url(style.css);
 
 .background {
+    padding-top: 5vw;
     background-image: url(../Assets/Images/Agents/Agents-bg.png);
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    height: 500px;
+    height: 35vw;
     display: flex;
+    padding-top: 50px;
+    position: relative;
 }
 
 .left {
@@ -16,7 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    justify-content: center;
+    justify-content: start;
 }
 
 .left-container {
@@ -34,16 +39,18 @@
 
 .symbol-bg {
     position: absolute;
+    left: 35%;
+    width: 30vw;
     filter: invert(100%);
     z-index: -1;
     opacity: 0.1;
-    transform: translateX(70px) rotate(16deg) scale(1.4);
+    transform: rotate(16deg) scale(1.4);
 }
 
 .name {
-    padding: 0 160px 0 60px;
-    font-size: 64px;
-    line-height: 80px;
+    padding: 0 15% 0 60px;
+    font-size: clamp(12px, 5vw, 64px);
+    line-height: 140%;
     font-style: italic;
     display: flex;
     align-items: center;
@@ -53,9 +60,8 @@
 }
 
 .desc {
-    height: 150px;
-    width: 80%;
-    padding: 30px 160px 30px 90px;
+    margin-left: 20%;
+    padding: 3% 15% 3% 90px;
     display: flex;
     align-items: center;
     text-align: right;
@@ -64,15 +70,16 @@
 }
 
 .card-p, .skill-desc {
-    font-size: 18px;
-    line-height: 24px;
+    /* 18 */
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: 120%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     color: #1A1A1A;
 }
 
 .role {
-    height: 35px;
+    height: 2.5vw;
     gap: 10px;
     padding-right: 30px;
     display: flex;
@@ -91,38 +98,43 @@
 .role-text {
     color: #c5c5c5;
     font-weight: 500;
-    font-size: 23px;
+    font-size: 2vw;
     line-height: 17px;
 }
 
 .portrait {
-    width: 40%;
-    height: 500px;
+    width: 35%;
+    height: 100%;
     z-index: 1;
     right: 0;
+    bottom: 0;
     position: absolute;
     overflow: hidden;
     justify-content: center;
 }
 
-#gekko {
-    transform: scale(0.8) translateX(-220px);
+.portrait-img {
+    height: 140%;
 }
 
-.portrait-img {
-    height: 160%;
-    transform: translateX(-200px) translateY(-50px);
+#gekko {
+    transform: translateY(-10%);
+}
+
+#harbor {
+    transform: translateX(-5%);
 }
 
 .skills-container {
-    height: 500px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .card {
-    height: 80%;
-    width: 80%;
+    padding: 11px 10px;
+    margin: 0 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,8 +143,6 @@
 }
 
 .content {
-    height: 94%;
-    width: 97.5%;
     clip-path: polygon(15% 0%, 100% 0, 100% 85%, 85% 100%, 0 100%, 0% 15%);
     display: flex;
     flex-direction: column;
@@ -147,13 +157,14 @@
 }
 
 .card-top {
-    height: 73%;
-    width: 100%;
+    height: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-top-right {
-    width: 100%;
+    width: 40vw;
     height: 100%;
     flex: 1;
     padding: 30px;
@@ -164,37 +175,33 @@
 }
 
 .skill-name {
-    font-size: 32px;
+    font-size: clamp(8px, 2.5vw, 28px);
     color: #FF5C00;
 }
 
 .skill-desc {
+    font-size: clamp(8px, 1.4vw, 18px);
+    line-height: 120%;
     text-align: center;
 }
 
 .card-top-left {
-    height: 100%;
-    width: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .skill-video {
-    height: 100%;
+    height: 25vw;
+    max-height: 300px;
     left: 0;
 }
 
-.card-top-right {
-    height: 100%;
-    width: 40%;
-}
-
 .card-bottom {
-    height: 25%;
+    height: 8vw;
+    max-height: 150px;
     width: 100%;
-    padding-left: 40px;
-    padding-right: 150px;
+    padding: 0 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -234,4 +241,221 @@
 
 .buttons:hover .skill-icon {
     transform: skew(15deg) scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .background {
+        row-gap: 20px;
+    }
+
+    .card-top {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .skill-video {
+        height: auto;
+        max-height: 500px;
+        width: 75vw;
+        left: 0;
+    }
+
+    .skill-name {
+        line-height: 100%;
+        font-size: clamp(8px, 5vw, 48px);
+        color: #FF5C00;
+    }
+    
+    .skill-desc {
+        font-size: clamp(8px, 2vw, 32px);
+        line-height: 120%;
+        text-align: center;
+    }
+
+    .card-top-right {
+        width: 70vw;
+        height: 30vw;
+        flex: none;
+        padding: 20px;
+        row-gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-bottom {
+        height: 70px;
+    }
+
+    .container {
+        height: 300px;
+    }
+
+    .left {
+        height: 100%;
+        width: 100%;
+        padding: 0 12%;
+        display: flex;
+        flex-direction: ceolumn;
+        align-items: end;
+        justify-content: end;
+    }
+    
+    .left-container {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+    
+    .right {
+        height: 100%;
+        width: 0%;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .symbol-bg {
+        position: absolute;
+        width: 40vw;
+        left: 30%;
+        filter: invert(100%);
+        z-index: -1;
+        opacity: 0.1;
+        transform: rotate(16deg) scale(1.4);
+    }
+    
+    .name {
+        padding: 0 10% 0 10%;
+        font-size: clamp(12px, 5vw, 64px);
+        line-height: 140%;
+        z-index: 1;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-color: #FF5C00;
+    }
+    
+    .desc {
+        margin: 0;
+        padding: 3% 0 3% 10%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-color: #c5c5c5;
+    }
+
+    .card-p {
+        width: 90%;
+    }
+
+    .role {
+        height: 20px;
+        gap: 10px;
+        padding-right: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding-left: 5%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
+        /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%); */
+        background-color: black;
+    }
+    
+    .symbol {
+        height: 60%;
+    }
+    
+    .role-text {
+        color: #c5c5c5;
+        font-weight: 500;
+        font-size: 2vw;
+        line-height: 17px;
+    }
+
+    .portrait {
+        right: auto;
+        left: 120px;
+        bottom: 20px;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .portrait-img {
+        transform: translateY(30px);
+    }
+
+    #gekko {
+        height: 110%;
+        transform: translateY(0) translateX(-20px);
+    }
+    
+    #harbor {
+        height: 120%;
+        transform: translateY(40px) translateX(5%);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-top {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .skill-video {
+        height: auto;
+        max-height: 500px;
+        width: 90vw;
+        left: 0;
+    }
+
+    .skill-name {
+        line-height: 100%;
+        font-size: clamp(8px, 6vw, 48px);
+        color: #FF5C00;
+    }
+    
+    .skill-desc {
+        font-size: clamp(8px, 2.5vw, 32px);
+        line-height: 120%;
+        text-align: center;
+    }
+
+    .card-top-right {
+        width: 85vw;
+        height: 40vw;
+        flex: none;
+        padding: 20px;
+        row-gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-bottom {
+        height: 50px;
+    }
+
+    .container {
+        height: 250px;
+    }
+
+    .left {
+        padding: 0 5%;
+    }
+
+    .portrait {
+        left: 90px;
+    }
+
+    #harbor {
+        height: 120%;
+        transform: translateY(40px) translateX(-5%);
+    }
 }
