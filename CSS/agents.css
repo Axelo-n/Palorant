@@ -142,7 +142,7 @@ h1 {
     width: 100%;
     max-width: 1440px;
     max-height: 1200px;
-    top: 60px;
+    top: 50px;
     z-index: -1;
     opacity: 0.3;
     position: fixed;

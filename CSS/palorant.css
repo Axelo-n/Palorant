@@ -16,10 +16,10 @@
     top: 50%;
     left: 50%;
     height: 100%;
-    min-width: 100%;
+    min-width: 1480px;
     z-index: 0;
     opacity: 0.6;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.2);
     position: absolute;
     object-fit: cover;
 }
@@ -42,7 +42,7 @@
 }
 
 .palorant-img {
-    width: 35%;
+    width: 500px;
     margin-bottom: 10px;
     height: auto;
     filter: drop-shadow(0 0 10px #1A1A1A);
@@ -102,6 +102,9 @@
 }
 
 
+
+
+/* NEWS */
 .news {
     height: 620px;
     width: 100%;
@@ -155,6 +158,7 @@
     min-width: 300px;
     background-color: #2A2A2A;
     display: flex;
+    align-items: center;
     flex: 0 0 auto;
     transition: transform 0.3s ease;
 }
@@ -176,10 +180,11 @@
 
 .news-wrapper {
     width: 100%;
+    height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .news-img {
@@ -223,6 +228,10 @@
 
 
 
+
+
+
+/* SEASON */
 .season {
     height: 700px;
     width: 100%;
@@ -252,12 +261,17 @@
     font-size: 4.5rem;
     font-weight: 500;
     line-height: 4.5rem;
-    text-shadow: 0 0 25px black;
+    text-shadow: 0 0 25px black,
+                 0 0 25px black,
+                 0 0 25px black;
 }
 
 .season-text {
     font-size: 1.5rem;
     padding: 1rem 0;
+    text-shadow: 0 0 25px black,
+                 0 0 25px black,
+                 0 0 25px black;
 }
 
 .season-btn {
@@ -283,6 +297,10 @@
 
 
 
+
+
+
+/* IDENTITY */
 .identity {
     height: 600px;
     width: 100%;
@@ -295,22 +313,21 @@
     overflow: hidden;
 }
 
-.identity-img {
+/* .identity-img {
     height: 600px;
     width: 1440px;
     position: absolute;
-    /* transform: translateX(-150px); */
     z-index: 1;
     overflow: hidden;
     background-image: url(../Assets/Images/Home/identity.png);
     background-position: 700px center;
     background-size: contain;
     background-repeat: no-repeat;
-}
+} */
 
 .identity-left {
     height: 100%;
-    width: 55%;
+    width: 40%;
     padding-left: 50px;
     position: relative;
     display: flex;
@@ -318,7 +335,7 @@
 }
 
 .video-wrapper {
-    width: 100%;
+    width: 150%;
     max-height: 500px;
     padding: 10px;
     z-index: 0;
@@ -328,17 +345,21 @@
 }
 
 .identity-vid {
-    width: 55vw;
+    width: 100%;
 }
 
 .identity-container {
     height: 100%;
-    width: 45%;
+    width: 60%;
+    padding-left: 120px;
     z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    background-image: url(../Assets/Images/Home/identity.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .identity-top, .identity-bottom {
@@ -766,5 +787,15 @@
 @media (max-width: 768px) {
     .season {
         background-position: -150px center;
+    }
+
+    .palorant-img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .palorant-img {
+        width: 300px;
     }
 }
