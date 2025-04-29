@@ -7,22 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
     
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active dari semua button
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         
-            // Ambil data dari tombol
             const videoUrl = btn.dataset.video;
             const name = btn.dataset.name;
             const desc = btn.dataset.desc;
         
-            // Update video
             const videoElement = skillVideo.querySelector('source');
             videoElement.src = videoUrl;
             skillVideo.load();
             skillVideo.play();
         
-            // Update teks
             skillName.textContent = name;
             skillDesc.textContent = desc;
         });

@@ -302,7 +302,7 @@
 
 /* IDENTITY */
 .identity {
-    height: 600px;
+    height: 500px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -433,6 +433,9 @@
 
 
 
+
+
+/* AGENTS */
 .agents {
     height: 600px;
     width: 100%;
@@ -602,6 +605,9 @@
 
 
 
+
+
+/* MAPS */
 .maps {
     height: 600px;
     width: 100%;
@@ -639,7 +645,6 @@
 }
 
 .image-accordion {
-    /* position: absolute; */
     display: flex;
     padding-right: 20px;
     width: 66%;
@@ -648,7 +653,6 @@
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
-    clip-path: polygon(0% 0%, 100% 0%, 93.5% 100%, 0% 100%);
 }
 
 .panel {
@@ -667,7 +671,6 @@
     width: auto;
     height: 700px;
     transform: translateY(-90px);
-    position: translate;
     object-fit: contain;
     transition: transform 0.5s ease, height 0.5s ease;
 }
@@ -782,6 +785,82 @@
     #phoenix {
         display: none;
     }
+
+    .identity {
+        flex-direction: column;
+        background-image: url(../Assets/Images/Home/News_bg.png);
+    }
+
+    .identity-left {
+        height: 40%;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-wrapper {
+        width: 350px;
+        padding: 5px;
+    }
+
+    .identity-container {
+        height: 60%;
+        width: 100%;
+        padding: 10px 0;
+        justify-content: center;
+        background-image: url();
+    }
+
+    .identity-top {
+        height: 0;
+    }
+
+    .identity-center {
+        height: auto;
+        padding: 0 50px;
+    }
+
+    .identity-bottom {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .identity-btn-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .identity-weare {
+        font-size: clamp(14px, 3vw, 48px);
+    }
+
+    .identity-palorant-container {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .identity-palorant {
+        width: 50%;
+        min-width: 380px;
+    }
+
+    .identity-desc-container {
+        padding-top: 10px;
+    }
+
+    .identity-text {
+        font-size: clamp(12px, 1.8vw, 64px);
+    }
+
+    .identity-btn {
+        font-size: clamp(12px, 1.8vw, 64px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -798,4 +877,31 @@
     .palorant-img {
         width: 300px;
     }
+
+    .season-heading {
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 3.5rem;
+        text-shadow: 0 0 25px black,
+                     0 0 25px black,
+                     0 0 25px black;
+    }
+
+    .identity-weare {
+        text-align: center;
+    }
+
+    .identity-palorant-container {
+        justify-content: center;
+    }
+
+    .identity-palorant {
+        min-width: 320px;
+    }
+
+    .identity-text {
+        text-align: center;
+    }
+
+    
 }

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".image-accordion");
     const panels = document.querySelectorAll(".panel");
     let currentIndex = 0;
-    let interval;
+    let intervalId;
 
     function setActivePanel(index) {
         panels.forEach((panel, i) => {
@@ -11,34 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function startAutoScroll() {
-        interval = setInterval(() => {
-            setActivePanel(currentIndex);
+        stopAutoScroll(); // jaga-jaga biar ga dobel interval
+        intervalId = setInterval(() => {
             currentIndex = (currentIndex + 1) % panels.length;
+            setActivePanel(currentIndex);
         }, 3000);
     }
 
     function stopAutoScroll() {
-        clearInterval(interval);
+        clearInterval(intervalId);
     }
 
-    // Mulai scroll otomatis pertama kali
+    // Setup awal
     setActivePanel(currentIndex);
     startAutoScroll();
 
-    // Saat hover panel -> stop scroll & kasih aktif ke yang dihover
-    panels.forEach((panel, i) => {
+    // Hover panel
+    panels.forEach((panel, index) => {
         panel.addEventListener("mouseenter", () => {
             stopAutoScroll();
-            currentIndex = i;
-            setActivePanel(i);
-        });
-
-        panel.addEventListener("mouseleave", () => {
-            // tunggu sampai mouse keluar dari container buat lanjut scroll lagi
+            setActivePanel(index);
+            currentIndex = index; // update index ke yang dihover
         });
     });
 
-    // Kalau mouse keluar dari container -> jalanin scroll lagi
+    // Mouse keluar dari container
     container.addEventListener("mouseleave", () => {
         startAutoScroll();
     });
