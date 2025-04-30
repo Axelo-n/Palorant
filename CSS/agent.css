@@ -70,7 +70,6 @@
 }
 
 .card-p, .skill-desc {
-    /* 18 */
     font-size: clamp(12px, 1.5vw, 18px);
     line-height: 120%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -87,7 +86,6 @@
     justify-content: left;
     padding-left: 35px;
     clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
-    /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%); */
     background-color: black;
 }
 
@@ -362,7 +360,6 @@
         justify-content: left;
         padding-left: 5%;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
-        /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%); */
         background-color: black;
     }
     

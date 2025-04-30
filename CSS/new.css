@@ -23,7 +23,6 @@ main {
     min-width: 1000px;
     top: 0;
     z-index: -1;
-    /* transform: translateY(150px); */
     overflow: hidden;
     position: absolute;
 }

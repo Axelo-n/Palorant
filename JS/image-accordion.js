@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function startAutoScroll() {
-        stopAutoScroll(); // jaga-jaga biar ga dobel interval
+        stopAutoScroll();
         intervalId = setInterval(() => {
             currentIndex = (currentIndex + 1) % panels.length;
             setActivePanel(currentIndex);
@@ -22,20 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(intervalId);
     }
 
-    // Setup awal
     setActivePanel(currentIndex);
     startAutoScroll();
 
-    // Hover panel
     panels.forEach((panel, index) => {
         panel.addEventListener("mouseenter", () => {
             stopAutoScroll();
             setActivePanel(index);
-            currentIndex = index; // update index ke yang dihover
+            currentIndex = index;
         });
     });
 
-    // Mouse keluar dari container
     container.addEventListener("mouseleave", () => {
         startAutoScroll();
     });

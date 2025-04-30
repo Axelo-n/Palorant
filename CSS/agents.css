@@ -177,7 +177,7 @@ footer {
     .card {
         height: 100%;
         width: 100%;
-        flex: 1 1 calc(50% - 10px); /* 2 card dalam satu baris pada layar kecil */
+        flex: 1 1 calc(50% - 10px);
     }
 
     .agents-img {
@@ -237,8 +237,7 @@ footer {
     }
 
     h1 {
-        font-size: 32px;
-        
+        font-size: 32px;    
     }
 
     .card {
