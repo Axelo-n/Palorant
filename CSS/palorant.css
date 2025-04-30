@@ -878,13 +878,33 @@
         width: 300px;
     }
 
+    .season-wrapper {
+        width: 100%;
+        padding-left: 10%;
+    }
+
     .season-heading {
-        font-size: 3.5rem;
+        font-size: 13vw;
         font-weight: 500;
-        line-height: 3.5rem;
+        line-height: 100%;
         text-shadow: 0 0 25px black,
                      0 0 25px black,
                      0 0 25px black;
+    }
+
+    .season-text {
+        width: 100%;
+        padding: 5% 0;
+        line-height: 100%;
+    }
+
+    .season-btn {
+        font-size: clamp(12px, 4vw, 16px);
+    }
+
+    .identity-center {
+        width: 100%;
+        padding: 0 15px;
     }
 
     .identity-weare {
@@ -896,7 +916,7 @@
     }
 
     .identity-palorant {
-        min-width: 320px;
+        min-width: 280px;
     }
 
     .identity-text {

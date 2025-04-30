@@ -99,4 +99,16 @@ input[type="checkbox"] {
     .container {
         padding: 15px 20px;
     }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+    }
 }

@@ -150,3 +150,26 @@ ul {
         width: 90%;
     }
 }
+
+@media (max-width: 480px) {
+    h1, h2, h3, h4 {
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    .news-p, li {
+        font-size: 12px;
+    }
+
+    .news-a {
+        font-size: 12px;
+    }
+
+    .section {
+        padding-left: 15px;
+    }
+
+    ul {
+        padding-left: 25px;
+    }
+}
