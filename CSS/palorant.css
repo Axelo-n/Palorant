@@ -1089,4 +1089,8 @@
         padding: 0.5% 5% 0.5% 10%;
         font-size: 1rem;
     }
+    
+    .mobile-app {
+        font-size: 12px;
+    }
 }
