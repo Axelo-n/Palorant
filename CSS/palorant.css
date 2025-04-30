@@ -437,7 +437,7 @@
 
 /* AGENTS */
 .agents {
-    height: 600px;
+    height: 500px;
     width: 100%;
     max-width: 1440px;
     display: flex;
@@ -452,8 +452,7 @@
 
 .agents-left {
     height: 100%;
-    width: 100%;
-    padding-right: 58%;
+    width: 50%;
     color: black;
     display: flex;
     flex-direction: column;
@@ -463,68 +462,58 @@
 }
 
 .agents-right {
-    height: 600px;
-    width: 100%;
-    padding-left: 70px;
-    gap:35px;
-    justify-content: flex-end;
-    position: absolute;
+    height: 100%;
+    width: 50%;
+    padding-left: 20px;
+    position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-.agents-card {
-    transition: opacity 0.3s ease;
-}
-
-#jett, #phoenix {
-    transform: scale(1.1) translateY(-70px) rotate(-7deg);
-}
-
-#chamber {
-    transform: scale(1.1) translateY(70px) translateX(17px) rotate(-7deg);
-}
-
-.agents-card.dimmed {
-    opacity: 0.5;
-}
-
-.best-agent.dimmed {
-    opacity: 0.5;
+.agent-card-container {
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+    position: relative;
+    /* display: flex;
+    justify-content: center; */
+    background-image: url(../Assets/Images/Agents/Chamber.png);
+    background-size: 100%;
+    background-position: center 50px;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .best-agent {
-    padding: 15px 160px 15px 80px;
-    transform: translateX(150px) translateY(450px);
+    height: auto;
+    width: 100%;
+    padding: 3% 15%;
     clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
-    position: absolute;
-    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     background-color: #f5f5f5;
 }
 
 .best-name {
     color: #FF5C00;
     font-weight: 800;
-    font-size: 56px;
-    line-height: 50px;
+    font-size: clamp(20px, 4.5vw, 64px);
+    line-height: 100%;
     font-style: italic;
 }
 
 .best-desc {
     color: #1A1A1A;
     font-weight: 600;
-    font-size: 40px;
-    line-height: 30px;
+    font-size: clamp(16px, 3vw, 64px);;
+    line-height: 100%;
     font-style: italic;
 }
-
-/* #jett:hover, #phoenix:hover {
-    transform: scale(1.15) translateY(-50px) translateX(3px) rotate(-7deg);
-}
-
-#chamber:hover, #omen:hover {
-    transform: scale(1.15) translateY(90px) translateX(19px) rotate(-7deg);
-} */
 
 .agents-left-top, .agents-left-bottom {
     height: 16%;
@@ -547,7 +536,7 @@
     margin: 0;
     font-size: 3.5vw;
     font-weight: 500;
-    line-height: 50px;
+    line-height: 100%;
     color: #1A1A1A;
     text-align: left;
     font-style: italic;
@@ -557,7 +546,7 @@
 
 .agents-title {
     padding: 0 100px 0 50px;
-    font-size: clamp(90px, 9vw, 120px);
+    font-size: clamp(48px, 9vw, 120px);
     font-weight: 700;
     line-height: 100%;
     color: #FF5C00;
@@ -570,9 +559,8 @@
 .agents-desc {
     width: 100%;
     padding: 20px 20px 20px 50px;
-    font-size: clamp(16px, 1.5vw, 18px);
+    font-size: clamp(14px, 1.5vw, 18px);
     font-weight: 400;
-    text-shadow: 0px 0px 10px #f5f5f5;
 }
 
 .agents-left-bottom {
@@ -871,6 +859,79 @@
     .palorant-img {
         width: 400px;
     }
+
+    .agents {
+        gap: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .agents-right {
+        width: 50%;
+        height: 70%;
+        top: 0;
+        right: 0;
+        align-items: flex-end;
+        position: absolute;
+    }
+
+    .agent-card-container {
+        background-size: 100%;
+        background-position: center 20px;
+    }
+
+    .best-agent {
+        padding: 1% 15%;
+    }
+
+    .agents-left {
+        height: 50%;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .agents-left-center {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .agents-left-bottom {
+        height: auto;
+    }
+
+    .agents-meetyour {
+        padding: 0 20px;
+        font-size: clamp(14px, 3.5vw, 64px);
+    }
+    
+    .agents-title {
+        padding: 0 10% 0 20px;
+        font-size: clamp(36px, 9vw, 120px);
+    }
+
+    .agents-desc {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: clamp(12px, 1.5vw, 18px);
+    }
+
+    .agents-btn {
+        padding: 5px 10% 5px 20px;
+        font-size: 16px;
+        line-height: 100%;
+    }
+
+    .agents-left-bottom {
+        padding-bottom: 20px;
+    }
+
+    .agents-left-top {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -923,5 +984,18 @@
         text-align: center;
     }
 
-    
+    .agents-right {
+        width: 100%;
+        position: inherit;
+        align-items: flex-end;
+    }
+
+    .agent-card-container {
+        background-size: 80%;
+        background-position: center 20px;
+    }
+
+    .best-agent {
+        padding: 1% 15%;
+    }
 }
