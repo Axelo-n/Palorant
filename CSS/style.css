@@ -147,6 +147,10 @@ body {
     transition: fill ease 0.3s;
 }
 
+.logo-fill-active {
+    fill: #FF5C00;
+}
+
 .logo-fill:hover {
     fill: #FF5C00;
 }
@@ -209,6 +213,26 @@ a {
     position: relative;
     padding: 5px;
     font-size: 95%;
+}
+
+.nav-links-active {
+    position: relative;
+    padding: 5px;
+    font-size: 95%;
+    color: #FF5C00;
+}
+
+.nav-links-active::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+    background-color: #FF5C00;
+    transition: width 0.3s ease-in-out;
 }
 
 .nav-links-contain {
